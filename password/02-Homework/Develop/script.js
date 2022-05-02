@@ -99,4 +99,16 @@ else if (confirmSpecial) {
 else if (confirmUppercase) {
   output = uppercase
 }
+// 05 displaypassword based on criteria.
+
+var password = [];
+ 
+//random selection
+for ( var i = 0; i < enter; i++) {
+  var chooseoutput = output[Math.floor(Math.random() * output.length)];
+  password.push(chooseoutput);
+}
+return password
+}
+
 
