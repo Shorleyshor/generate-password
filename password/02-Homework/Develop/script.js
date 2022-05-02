@@ -45,6 +45,58 @@ function generatePassword() {
   confirmUppercase = confirm("Will this contain Uppercase Letters?");
   confirmLowercase = confirm("Will this contain Lowercase Letters?");
 
+};
+// 04 generate password based on criteria
 
-
+if (!confirmNumber && !confirmSpecial && !confirmUppercase && !confirmLowercase) {
+  output = alert("You must choose a criteria!");
+}
+  else if (confirmUppercase && confirmLowercase && confirmNumber && confirmSpecial) {
+    output = special.concat(number, uppercase, lowercase);
+  }
+//for 3 options
+else if (confirmSpecial && confirmLowercase && confirmNumber ) {
+  output = special.concat(lowercase, number)
+}
+else if (confirmSpecial && confirmNumber && confirmUppercase) {
+  output = special.concat(number, uppercase)
+}
+else if (confirmNumber && confirmLowercase && confirmUppercase) {
+  output = number.concat(uppercase, lowercase)
+}
+else if (confirmSpecial && confirmLowercase && confirmUppercase) {
+  output = special.concat(uppercase, lowercase)
+}
+// for two output
+else if (confirmNumber && confirmSpecial) {
+  output = number.concat(special)
+}
+else if (confirmNumber && confirmUppercase) {
+  output = number.concat(uppercase)
+}
+else if (confirmNumber && confirmLowercase) {
+  output = number.concat(lowercase)
+}
+else if (confirmLowercase && confirmUppercase) {
+  output = lowercase.concat(uppercase)
+}
+else if (confirmLowercase && confirmSpecial) {
+  output = lowercase.concat(special)
+}
+else if (confirmSpecial && confirmUppercase) {
+  output = special.concat(uppercase)
+}
+// for one output
+else if (confirmLowercase) {
+  output = lowercase;
+}
+else if (confirmNumber) {
+  output = number
+}
+else if (confirmSpecial) {
+  output = special;
+}
+else if (confirmUppercase) {
+  output = uppercase
+}
 
