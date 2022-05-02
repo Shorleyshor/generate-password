@@ -33,5 +33,18 @@ generateBtn.addEventListener("click", function () {
 function generatePassword() {
   enter = parseInt(prompt("How many characters would you like your password? Enter a number between 8 and 128"));
 
+  if (!enter) {
+    alert("This needs a value");
+} else if (enter < 8 || enter > 128) {
+  enter = parseInt(prompt("You must choose a password lenght between 8 and 128"));
+
+  // 03 validate the input
+} else {
+  confirmNumber = confirm("Will this contain Numbers?")
+  confirmSpecial = confirm("Will this contain SpecialCharacters");
+  confirmUppercase = confirm("Will this contain Uppercase Letters?");
+  confirmLowercase = confirm("Will this contain Lowercase Letters?");
+
+
 
 
