@@ -1,0 +1,2 @@
+created an application that shows the use of javascript to generate random password for employees based on the criterias that has been selected.
+This project is deployed to github and below are the links to both my github and the url of the  password geneator application.
